@@ -3,15 +3,3 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html
-hooks:
- BeforeInstall:
-   - location: script/install_dependencies
-     timeout: 60
-     runas: root
-   - location: script/start_server
-     timeout: 60
-     runas: root
- ApplicationStop:
-   - location: stript/stop_server
-     timeout: 60
-     runas: root
